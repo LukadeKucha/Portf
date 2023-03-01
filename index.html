@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+
+</head>
+
+
+<body>
+
+    <div class="sidesection">
+        <div class="topbar">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <div class="music-icon-container">
+                        <div class="music-icon">
+                            <div class="music-icon-button"></div>
+                            <div class="music-waves-container">
+                                <div class="music-wave"></div>
+                                <div class="music-wave"></div>
+                                <div class="music-wave"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <audio id="music" src="music.mp3"></audio>
+
+                </div>
+                <div class="topbar-right">
+                    <div class="language-dropdown">
+                        <button class="dropdown-btn">
+                            <span>Georgian</span>
+                            <i class="arrow-icon"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Georgian</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-mode">
+                        <button class="mode-btn" onclick="toggleMode()"><i class='bx bx-sun'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="sec1">
+            <div class="text">
+                <div id="typewriter">
+                    Hi, I am
+                    <span id="text"></span>
+                </div>
+                <br>
+                <h2 style="color: rgb(5, 253, 216);">Front-End Developer / Web Developer</h2>
+                <br>
+                <h3 style="max-width: 600px;">I’m a hardworking and ambitious front end (React) developer from Georgia,
+                    who wants to learn as much as possible to enhance his skills as an individual and also as a team
+                    worker.</h3>
+                <div class="btn">
+                    <button><a href="#sec4">Contact Me</a> </button>
+                </div>
+            </div>
+
+        </section>
+        <section id="sec2"></section>
+        <section id="sec3">
+
+            <div class="parent">
+
+            </div>
+        </section>
+        <section id="sec4"></section>
+    </div>
+
+    <div class="progress">
+        <ul>
+            <span class="sideline"></span>
+            <li> <a href="#sec1" class="clickable">Intro</a> </li>
+            <li> <a href="#sec2" class="clickable">About Me</a> </li>
+            <li> <a href="#sec3" class="clickable">Projects</a> </li>
+            <li> <a href="#sec4" class="clickable">Contact</a> </li>
+        </ul>
+    </div>
+
+    <div class="socials">
+        <ul>
+            <li> <a href=""><img src="facebook-circle-logo-36.png"></a> </li>
+            <li> <a href=""><img src="instagram-logo-36.png"></a> </li>
+            <li> <a href=""><img src="linkedin-square-logo-36.png"></a> </li>
+        </ul>
+        </ul>
+    </div>
+    <!-- Scroll-up -->
+    <button id="scroll-top-btn" class="hidden">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
