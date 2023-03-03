@@ -75,14 +75,14 @@ body {
   color: rgb(95, 93, 91) !important;
 }
 
-.progress {
+.sidenav {
   position: fixed;
   top: 50%;
   left: 2%;
   transform: translateY(-50%);
 }
 
-.progress ul {
+.sidenav ul {
   list-style: none;
   height: 200px;
   display: flex;
@@ -92,11 +92,11 @@ body {
   position: relative;
 }
 
-.progress ul li {
+.sidenav ul li {
   z-index: 1;
 }
 
-.progress ul li a {
+.sidenav ul li a {
   color: var(--text-color);
   background-color: transparent !important;
   text-decoration: none;
@@ -105,7 +105,7 @@ body {
   letter-spacing: 1px;
 }
 
-.progress ul li a:hover {
+.sidenav ul li a:hover {
   color: var(--hover-color);
 }
 
@@ -153,9 +153,10 @@ ul .sideline {
 .topbar {
   display: flex;
   justify-content: center;
-  height: 12%;
+  height: 70px;
   width: 100%;
-  position: fixed;
+  position: sticky;
+  top: 0;
 }
 
 .topbar-content {
@@ -453,7 +454,6 @@ h3 {
   /* flex-direction: row; */
   justify-content: space-between;
   margin: -7px auto;
-  padding: 31px;
   position: relative;
   max-width: 840px;
 }

@@ -1,3 +1,4 @@
+// Sidenav
 function throttle(fn, wait) {
   var time = Date.now();
   return function () {
@@ -18,8 +19,8 @@ function scroll_cb() {
 
       if (windowTop > offsetTop - 50 && windowTop < offsetTop + outerHeight) {
         var elemId = $(elem).attr("id");
-        $(".progress ul li a.current").removeClass("current");
-        $(".progress ul li a[href='#" + elemId + "']").addClass("current");
+        $(".sidenav ul li a.current").removeClass("current");
+        $(".sidenav ul li a[href='#" + elemId + "']").addClass("current");
       }
     });
   };

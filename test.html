@@ -1,93 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Document</title>
     <style>
-
+        .page-wrapper{
+            width: 100%;
+            height: 420vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .topbar{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 12%;
+            background-color: black;
+        }
     </style>
-
 </head>
-
-
 <body>
-    <div class="sidesection">
-        <section id="sec1">Intro</section>
-        <section id="sec2">About Me</section>
-        <section id="sec3">Projects</section>
-        <section id="sec4">Contact</section>
-    </div>
-
-    <div class="progress">
-        <ul>
-            <span class="sideline"></span>
-            <li> <a href="#sec1" class="clickable">Intro</a> </li>
-            <li> <a href="#sec2" class="clickable">About Me</a> </li>
-            <li> <a href="#sec3" class="clickable">Projects</a> </li>
-            <li> <a href="#sec4" class="clickable">Contact</a> </li>
-        </ul>
-    </div>
-
-    <div class="socials">
-        <ul>
-            <li> <a href="">FB</a> </li>
-            <li> <a href="">Insta</a> </li>
-            <li> <a href="">Git</a> </li>
-        </ul>
-        </ul>
-    </div>
+  <button onclick="get()">Click Here</button>
 
     <script>
-        function throttle(fn, wait) {
-            var time = Date.now();
-            return function () {
-                if (time + wait - Date.now() < 0) {
-                    fn();
-                    time = Date.now();
-                }
-            };
+        function get()
+        {
+        var historyObject = window.history;
+
+var numHistoryItems = historyObject.length;
+
+for(var i = 0; i < numHistoryItems; i++) {
+    var url = historyObject[i];
+    console.log(url);
+}
         }
-
-        function scroll_cb() {
-            var scroll = $(window).scrollTop();
-            var addClassOnScroll = function () {
-                var windowTop = $(window).scrollTop();
-                $("section[id]").each(function (index, elem) {
-                    var offsetTop = $(elem).offset().top;
-                    var outerHeight = $(this).outerHeight(true);
-
-                    if (windowTop > offsetTop - 50 && windowTop < offsetTop + outerHeight) {
-                        var elemId = $(elem).attr("id");
-                        $(".progress ul li a.current").removeClass("current");
-                        $(".progress ul li a[href='#" + elemId + "']").addClass("current");
-                    }
-                });
-            };
-            addClassOnScroll();
-        }
-
-        $(document).ready(function () {
-            window.addEventListener("scroll", throttle(scroll_cb, 100));
-            $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
-                var doc = $(document).height();
-                var win = $(window).height();
-                var value =
-                    (scroll / (doc - win)) *
-                    90; /* this value will varie in function of your page height*/
-                $("ul .sideline").css("height", value + "%");
-            });
-            $("a.clickable").click(function () {
-                $("a.current").removeClass("current");
-                $(this).addClass("current");
-            });
-        });
-
     </script>
-</body>
 
+</body>
 </html>
